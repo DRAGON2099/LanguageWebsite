@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Loading Page - www.Lurnee.com</title>
+    <style>
+      /* CSS code for loading page */
+
+      /* Set the background, font, and layout */
+      body {
+        margin: 0;
+        padding: 0;
+        background-image: url("./images/cat_image_end.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        font-family: Arial, sans-serif;
+      }
+
+      /* Styling for the preloader section */
+      #preloader {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: center;
+        height: calc(100vh - 100px);
+        margin-bottom: 100px;
+      }
+
+      /* Styling for the loading text */
+      #loading-text {
+        font-size: 24px;
+        margin-bottom: 20px;
+        color: #6b96ff; /* Set the text color */
+        font-weight: bold; /* Set the font weight */
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Add a text shadow */
+        text-transform: uppercase; /* Convert the text to uppercase */
+        letter-spacing: 2px; /* Add letter spacing */
+        text-align: center; /* Center the text */
+      }
+
+      /* Styling for the loading bar */
+      #loading-bar {
+        width: 400px; /* Adjust the width of the loading bar */
+        height: 20px; /* Adjust the height of the loading bar */
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      /* Styling for the loading progress */
+      #loading-progress {
+        width: 0;
+        height: 100%;
+        background-color: #6b96ff; /* Change the background color to blue */
+        transition: width 0.5s ease;
+      }
+
+      /* Styling for the cat image */
+      #cat {
+        width: 200px;
+        height: 200px;
+        background-image: url("./images/cat_looking_left.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: transform 0.5s ease;
+        cursor: pointer;
+        animation: pounceAnimation 1.5s infinite;
+      }
+
+      /* Styling for the cat image when hovering over it */
+      #cat:hover {
+        transform: scale(1.1);
+        cursor: pointer; /* Change the cursor to a hand */
+      }
+
+      /* Keyframe animation for the cat image */
+      @keyframes pounceAnimation {
+        0% {
+          transform: translate(0, 0) scale(1);
+        }
+        50% {
+          transform: translate(25px, 25px) scale(1.2);
+        }
+        100% {
+          transform: translate(50px, 50px) scale(1);
+          background-image: url("./images/cat_going_left.png");
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="preloader">
+      <!-- The cat image that triggers the continueToWelcomePage() function when clicked -->
+      <div id="cat" onclick="continueToWelcomePage()"></div>
+
+      <!-- Text indicating the loading process -->
+      <div id="loading-text">The cat is warming up</div>
+
+      <!-- The loading bar element -->
+      <div id="loading-bar">
+        <div id="loading-progress"></div>
+      </div>
+    </div>
+
+    <!-- Rest of your website content goes here -->
+
+    <script>
+      // Simulate loading progress
+      var loadingProgress = 0;
+      var loadingProgressBar = document.getElementById("loading-progress");
+      var loadingText = document.getElementById("loading-text");
+      var cat = document.getElementById("cat");
+
+      // Function to simulate the loading progress
+      function simulateLoading() {
+        if (loadingProgress < 100) {
+          loadingProgress += 10;
+          loadingProgressBar.style.width = loadingProgress + "%";
+          setTimeout(simulateLoading, 500);
+        } else {
+          loadingText.textContent = "Pet the cat to continue";
+          cat.classList.remove("loading");
+        }
+      }
+
+      // Function to continue to the welcome page when the cat image is clicked
+      function continueToWelcomePage() {
+        // Redirect to welcome page
+        window.location.href = "welcome_page.html";
+      }
+
+      simulateLoading();
+    </script>
+  </body>
+</html>

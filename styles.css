@@ -1,0 +1,237 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+  background-image: url("./images/header-png-1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: Arial, sans-serif;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Header styles */
+header {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-links li {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.nav-links li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.cta-buttons a {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url("images/hero-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Features section styles */
+.features {
+  background-color: #f2f2f2;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.feature {
+  margin-bottom: 40px;
+}
+
+.feature img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.feature h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Language selection section styles */
+.language-selection {
+  padding: 60px 0;
+  text-align: center;
+}
+
+.language-card {
+  display: inline-block;
+  width: 300px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px;
+}
+
+.language-card img {
+  width: 80px;
+  margin-bottom: 20px;
+}
+
+.language-card h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.language-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.5;
+}
+
+.learn-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+}
+
+/* Testimonials section styles */
+.testimonials {
+  background-color: #f2f2f2;
+  padding: 60px 0;
+  text-align: center;
+}
+
+.testimonial {
+  margin-bottom: 40px;
+}
+
+.testimonial img {
+  width: 80px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.testimonial blockquote {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #666;
+}
+
+.testimonial cite {
+  font-size: 14px;
+  font-style: italic;
+  color: #666;
+}
+
+/* Call-to-action section styles */
+.cta {
+  background-color: #333;
+  padding: 100px 0;
+  text-align: center;
+  color: #fff;
+}
+
+.cta h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+}
+
+/* Footer styles */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.footer-links li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.footer-links li a {
+  color: #fff;
+  text-decoration: none;
+}
